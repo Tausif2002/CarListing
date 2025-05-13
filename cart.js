@@ -27,7 +27,7 @@ import { cars } from "./data.js";
   
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>
+        <td data-label="Product">
           <div class="product-info">
             <img src="./public/images/${car.image}" alt="${car.title}" />
             <div>
@@ -36,17 +36,18 @@ import { cars } from "./data.js";
             </div>
           </div>
         </td>
-        <td>
+        <td data-label="Quantity">
           <div class="quantity-controls">
             <button class="decrease-btn" data-id="${car.id}">-</button>
             <input type="text" value="${item.quantity}" readonly />
             <button class="increase-btn" data-id="${car.id}">+</button>
           </div>
         </td>
-        <td>₹${car.price.toLocaleString()}</td>
-        <td>₹${itemTotal.toLocaleString()}</td>
-        <td><button class="delete-btn" data-id="${car.id}"><i class="fa fa-trash"></i></button></td>
+        <td data-label="Price">₹${car.price.toLocaleString()}</td>
+        <td data-label="Total">₹${itemTotal.toLocaleString()}</td>
+        <td data-label="Remove"><button class="delete-btn" data-id="${car.id}"><i class="fa fa-trash"></i></button></td>
       `;
+      
       tbody.appendChild(row);
     });
   

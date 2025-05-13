@@ -1,0 +1,132 @@
+@import url("navbar.css");
+@import url("footer.css");
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: white;
+  }
+  
+  .card-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .car-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid black; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .content-section {
+    padding: 24px;
+  }
+  
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .title-row h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .location {
+    color: #777;
+    font-size: 0.95rem;
+    margin-top: 5px;
+  }
+  
+  .cart-btn {
+    background-color: #2e86de;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart-btn:hover {
+    background-color: #1d5fa1;
+  }
+  
+  .price-row {
+    margin-top: 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+  }
+  
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .details-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+  }
+  
+  .detail-box {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .detail-box i {
+    font-size: 1.4rem;
+    color: #2e86de;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+
+  .qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .qty-btn {
+    background-color: #2e86de;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .qty-display {
+    font-size: 1.2rem;
+  }
+  

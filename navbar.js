@@ -48,3 +48,12 @@ document.querySelector("#cart-icon").addEventListener("click", () => {
   window.location.href = "cart.html";
 });
 
+
+const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    const navActions = document.getElementById("navActions");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      navActions.classList.toggle("show");
+    });

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Details</title>
+  <link rel="stylesheet" href="carDetails.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script type="module" defer>
+    import {loadNavbar, loadFooter} from './layoutHelper.js'
+    window.addEventListener('DOMContentLoaded', async () => {
+    await loadNavbar('navbar-placeholder');
+    await loadFooter('footer-placeholder');
+});
+</script>
+</head>
+<body>
+    <nav class="navbar" id="navbar-placeholder">      
+    </nav>
+
+    <div class="card-container">
+        <div class="car-card">
+          <div class="image-section">
+            <img id="carImage" src="images/ford-explorer.jpg" alt="Ford Explorer">
+          </div>
+          <div class="content-section">
+            <div class="title-row">
+              <div>
+                <h2 id="carTitle">Ford Explorer</h2>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> <span id="carLocation">Chicago</span></p>
+              </div>
+              <div  class="cart-btn-container">
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+              </div>
+              
+            </div>
+    
+            <div class="price-row">
+              <span class="price" id="carPrice">$3,100,000</span>
+              <span class="old-price" id="carOldPrice">$3,250,000</span>
+            </div>
+    
+            <div class="details-grid">
+              <div class="detail-box"><i class="fas fa-car"></i><p>Brand<br><strong id="carBrand">Ford</strong></p></div>
+              <div class="detail-box"><i class="fas fa-cogs"></i><p>Model<br><strong id="carModel">Explorer</strong></p></div>
+              <div class="detail-box"><i class="fas fa-calendar-alt"></i><p>Year<br><strong id="carYear">2021</strong></p></div>
+              <div class="detail-box"><i class="fas fa-road"></i><p>Mileage<br><strong id="carMileage">200 km</strong></p></div>
+              <div class="detail-box"><i class="fas fa-tachometer-alt"></i><p>Max Speed<br><strong id="carSpeed">210 km/h</strong></p></div>
+              <div class="detail-box"><i class="fas fa-check-circle"></i><p>Condition<br><strong id="carCondition">Used</strong></p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <footer id="footer-placeholder" class="footer">
+</footer>
+  <script src="carDetails.js" type="module"></script>
+</body>
+</html>

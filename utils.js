@@ -9,6 +9,9 @@ export function renderCars(select, filteredCars) {
   filteredCars.forEach((car) => {
     const div = document.createElement("div");
     div.className = "card effect-item";
+    div.onclick =function handleCarClick() {
+      window.location.href = `carDetails.html?id=${car.id}`;
+    }
 
     const qtyInCart = getCartItemQty(car.id)
     console.log(qtyInCart)

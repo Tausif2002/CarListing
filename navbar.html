@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="navbar.css" /> -->
-    <title>Document</title>
-  </head>
-  <body>
-    <a href="/" style="text-decoration: none; color: white">
-      <div class="logo">
-        <img src="./public/images/carLogo.png" alt="" />
-        YourCar
-      </div>
-    </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="navbar.css" />
+</head>
+<body>
 
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/all-listings.html">Cars</a>
-      <a href="">Abou Us</a>
-      <a href="">Contact Us</a>
-    </div>
-    <div class="actions">
-      <a href="login.html"
-        ><button class="login-btn" id="loginBtn">Login</button></a
-      >
-      <a href="signup.html"
-        ><button class="signup-btn" id="signupBtn">Sign Up</button></a
-      >
-      <!-- Cart icon with count badge -->
-      <div id="cart-icon" class="cart-container" style="display: none">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span id="cart-count" class="badgeCart" style="display: none">0</span>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src="./public/images/carLogo.png" alt="Car Logo" />
+        <span>YourCar</span>
+      </a>
+
+      <!-- Hamburger icon -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
 
-      <span
-        id="usernameDisplay"
-        class="truncate"
-        title=""
-        style="color: white; margin-right: 10px; display: none"
-      ></span>
-      <button id="logoutBtn" class="logout-btn" style="display: none">
-        Logout
-      </button>
+      <!-- Links -->
+      <div class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/all-listings.html">Cars</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="nav-actions" id="navActions">
+        <a href="login.html"><button class="login-btn" id="loginBtn">Login</button></a>
+        <a href="signup.html"><button class="signup-btn" id="signupBtn">Sign Up</button></a>
+
+        <!-- Cart -->
+        <div class="cart-container-nav" id="cart-icon" style="display: none;">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badgeCart-nav" id="cart-count" style="display: none;">0</span>
+        </div>
+
+        <span id="usernameDisplay" class="truncate" style="display: none;"></span>
+        <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+      </div>
     </div>
-  </body>
+  </nav>
+
+
+
+</body>
 </html>
