@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="navbar.css" /> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/" style="text-decoration: none; color: white">
+      <div class="logo">
+        <img src="./public/images/carLogo.png" alt="" />
+        YourCar
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/all-listings.html">Cars</a>
+      <a href="">Abou Us</a>
+      <a href="">Contact Us</a>
+    </div>
+    <div class="actions">
+      <a href="login.html"
+        ><button class="login-btn" id="loginBtn">Login</button></a
+      >
+      <a href="signup.html"
+        ><button class="signup-btn" id="signupBtn">Sign Up</button></a
+      >
+      <!-- Cart icon with count badge -->
+      <div id="cart-icon" class="cart-container" style="display: none">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count" class="badgeCart" style="display: none">0</span>
+      </div>
+
+      <span
+        id="usernameDisplay"
+        class="truncate"
+        title=""
+        style="color: white; margin-right: 10px; display: none"
+      ></span>
+      <button id="logoutBtn" class="logout-btn" style="display: none">
+        Logout
+      </button>
+    </div>
+  </body>
+</html>

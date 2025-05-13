@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .navbar {
+  background-color: #121216;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 70px;
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+
+
+    .nav-links a:not([href="#FAQ"]):not([href="#Contact"]):hover {
+      color: #e53935;
+    }
+
+    .nav-links a[href="#FAQ"],
+    .nav-links a[href="#Contact"] {
+      font-weight: bold;
+    }
+
+    .navbar .actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .language {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 500;
+    }
+
+    .dropdown-btn {
+      border: 1px solid #e53935;
+      color: #e53935;
+      background: transparent;
+      padding: 8px 12px;
+      border-radius: 2px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .dropdown-btn:hover {
+      background-color: rgba(229, 57, 53, 0.1);
+    }
+
+    .vendor-btn {
+      background-color: #e53935;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+
+    .vendor-btn:hover {
+      background-color: #d32f2f;
+    }
+
+    .hero {
+    background: url('./car.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .overlay {
+    background-color: rgba(0, 10, 20, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .search-bar {
+    display: flex;
+    gap: 1px;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .search-bar input,
+  .search-bar select {
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    flex: 1;
+    min-width: 160px;
+    outline: none;
+  }
+
+  .search-bar button {
+    background-color: #f4511e;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-bar button:hover {
+    background-color: #d84315;
+  }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/854/854894.png" alt="logo">
+      Carlist
+    </div>
+
+    <div class="nav-links">
+      <a href="#Home" >Home</a>
+      <a href="#Vendors">Vendors</a>
+      <a href="#Cars">Cars</a>
+      <a href="#Shop">Shop</a>
+      <a href="#Blog" >Blog</a>
+      <a href="#Pages">Pages</a>
+      <a href="#FAQ" >FAQ</a>
+      <a href="#Contact">Contact</a>
+    </div>
+
+    <div class="actions">
+      <div class="language">
+        🌐 English
+      </div>
+      <button class="dropdown-btn">Customer ▼</button>
+      <button class="vendor-btn">Vendor ▼</button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+<section class="hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Find Your Desired Car</h1>
+        <p>You can get your desired awesome different types of cars here by name, category or brand.</p>
+  
+        <form class="search-bar">
+          <input type="text" placeholder="Find anything ...">
+          <select>
+            <option>Select Location</option>
+          </select>
+          <select>
+            <option>Select Brand</option>
+          </select>
+          <select>
+            <option>Select Type</option>
+          </select>
+          <button type="submit"><span>🔍</span> Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wishlist Tooltip</title>
+  <style>
+    .wishlist-container {
+      position: relative;
+      display: inline-block;
+      margin: 50px;
+    }
+
+    .wishlist-button {
+      background-color: #f72544;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .wishlist-button i {
+      color: white;
+      font-size: 20px;
+    }
+
+    .wishlist-tooltip {
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 6px 10px;
+      border-radius: 6px;
+      position: absolute;
+      left: 110%;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+      z-index: 1;
+      font-size: 14px;
+    }
+
+    .wishlist-tooltip::before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: transparent #333 transparent transparent;
+    }
+
+    .wishlist-container:hover .wishlist-tooltip {
+      visibility: visible;
+    }
+  </style>
+  <!-- Include Font Awesome for the heart icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="wishlist-container">
+  <button class="wishlist-button">
+    <i class="fas fa-heart"></i>
+  </button>
+  <div class="wishlist-tooltip">Save to Wishlist</div>
+</div>
+
+</body>
+</html>

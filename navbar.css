@@ -1,0 +1,136 @@
+/* NavBar Section */
+.navbar {
+    background-color: #0a0f2c;
+    border-bottom: 1px solid #405ff2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 70px;
+    color: white;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Ensure it stays on top */
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    font-weight: 500;
+    position: relative;
+}
+
+
+.nav-links a:hover {
+    color: #3753f7;
+    background-color: white;
+    padding: 7px;
+    border-radius: 5px;
+
+}
+
+.login-btn,
+.signup-btn,.logout-btn {
+    border: 1px solid #3753f7;
+    color: #f0f0f0;
+    background: transparent;
+    padding: 8px 12px;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signup-btn,.logout-btn {
+    background: #3753f7;
+    border: 1px solid white;
+    margin-left: 15px;
+}
+
+.logout-btn:hover{
+    background-color: #050c33;
+}
+
+.login-btn:hover {
+    background-color: rgba(229, 57, 53, 0.1);
+}
+
+
+.truncate {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+/* Cart container for relative positioning */
+.cart-container {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+
+  .cart-container i {
+    font-size: 24px;
+  }
+  
+  /* Badge style */
+  .badgeCart {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+  }
+  
+
+  .cart-container:hover i {
+    color: #3753f7;
+    transform: scale(1.1);
+  }
+  
+  
