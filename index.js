@@ -46,7 +46,7 @@ function renderBrands(data) {
         <p class="brand-quant">${brand.count} Items</p>
       </div><a/>
     `;
-    div.onclick = () => filterCarsByBrand(brand.name);
+    // div.onclick = () => filterCarsByBrand(brand.name);
     brandList.appendChild(div);
   });
 }
