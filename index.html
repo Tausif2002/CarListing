@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="homeStyle.css" />
+    <title>Document</title>
+    <script type="module" defer>
+        import {loadNavbar, loadFooter} from './layoutHelper.js'
+        window.addEventListener('DOMContentLoaded', async () => {
+        await loadNavbar('navbar-placeholder');
+        await loadFooter('footer-placeholder');
+    });
+    </script>
+    
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar-placeholder">
+        
+        
+    </nav>
+
+    <section>
+        <div class="hero">
+            <div class="overlay">
+                <div class="hero-content">
+                    <h1>Find Your Desired Car</h1>
+                    <p>You can get your desired awesome different types of cars here by name, category or brand.</p>
+                    <form action="" class="search-bar" id="searchForm">
+                        <input type="text" id="searchInput" placeholder="Find Any Car...">
+                        <div class="custom-select-wrapper">
+                            <select class="custom-select" id="locationFilter">
+                                <option>Select Location</option>
+                            </select>
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <select class="custom-select" id="brandFilter">
+                                <option>Select Brand</option>
+                            </select>
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <select class="custom-select" id="typeFilter">
+                                <option>Select Type</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" on><span><i class="fa-solid fa-magnifying-glass"></i></span> Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="brand-container" >
+            <div class="section-heading">
+                <p class="section-subtitle">Brands</p>
+                <h2 class="section-title">Explore Popular Brands</h2>
+            </div>
+            <div class="brand-grid" id="brandList">           
+            </div>
+    
+            <button id="seeAllBtn">See All</button>
+        </div>
+
+        <div class="car-container">
+            <div class="section-heading">
+                <p class="section-subtitle">Available Cars</p>
+                <h2 class="section-title">Latest Cars Listing</h2>
+            </div>
+            <div class="car-list" id="carList">      
+            </div>
+        </div>      
+    
+    </main>
+
+    <footer id="footer-placeholder" class="footer">
+    </footer>
+    
+    <script src="index.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

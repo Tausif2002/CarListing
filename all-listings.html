@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Car Listings</title>
+  <link rel="stylesheet" href="all-listings.css" />
+  <script type="module">
+    import {loadNavbar, loadFooter} from './layoutHelper.js'
+        loadNavbar('navbar-placeholder')
+        loadFooter('footer-placeholder')
+</script>
+</head>
+<body>
+  <nav id="navbar-placeholder" class="navbar"></nav>
+  <div class="container">
+    <button id="filterToggle" class="filter-toggle-btn">☰ Filters</button>
+  
+
+    <aside class="sidebar" id="mobileSidebar">
+      <div class="sidebar-header">
+        <h2>Filter Cars</h2>
+        <button class="close-sidebar-btn" id="closeSidebarBtn">✖</button>
+      </div>
+  
+
+      <div class="filter-group">
+        <label>Brand</label>
+        <select id="brandFilter"></select>
+      </div>
+      <div class="filter-group">
+        <label>Type</label>
+        <select id="typeFilter"></select>
+      </div>
+      <div class="filter-group">
+        <label>Location</label>
+        <select id="locationFilter"></select>
+      </div>
+      <div class="filter-group">
+        <label>Condition</label>
+        <select id="conditionFilter">
+          <option value="">All</option>
+          <option value="new">New</option>
+          <option value="used">Used</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Price Range</label>
+        <select id="priceFilter">
+          <option value="">All</option>
+          <option value="0-25000">Below $25,000</option>
+          <option value="25000-30000">$25,000 - $30,000</option>
+          <option value="30000-35000">$30,000 - $35,000</option>
+          <option value="35000+">Above $35,000</option>
+        </select>
+      </div>
+  
+      <button id="resetBtn" class="reset-btn">Reset Filters</button>
+    </aside>
+
+    <main class="main-content">
+      <h1>Available Cars</h1>
+      <div id="carList" class="car-list"></div>
+      <button id="seeAllBtn">See All</button>
+    </main>
+  </div>
+  
+  
+  <footer id="footer-placeholder" class="footer">
+  </footer>
+  <script src="all-listings.js" type="module"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      const toggleBtn = document.getElementById("filterToggle");
+    const closeBtn = document.getElementById("closeSidebarBtn");
+    const sidebar = document.getElementById("mobileSidebar");
+  
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.add("open");
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+    });
+    })
+    
+  </script>
+  
+</body>
+</html>

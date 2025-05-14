@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourCar Signup</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module">
+      import { loadNavbar, loadFooter } from "./layoutHelper.js";
+      loadNavbar("navbar-placeholder");
+      loadFooter("footer-placeholder");
+    </script>
+  </head>
+  <body>
+    <div class="page">
+      <nav id="navbar-placeholder" class="navbar"></nav>
+
+      <div class="container">
+        <div class="card">
+          <div class="logo-title">
+            <h1 class="brand-name">Your Car</h1>
+          </div>
+
+          <h2 class="form-title">Create Your Account</h2>
+
+          <form id="signupForm">
+            <!-- Full Name -->
+            <div class="input-group">
+              <label for="name">Full Name</label>
+              <div class="input-icon">
+                <i class="fas fa-user"></i>
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Enter your full name"
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+              <label for="email">Email ID <span>*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+              <label for="password">Password <span>*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-group">
+              <label for="confirmPassword"
+                >Confirm Password <span>*</span></label
+              >
+              <div class="input-icon">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Confirm your password"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+
+            <!-- Loading spinner placeholder -->
+            <div class="spinner hidden" id="loadingSpinner">
+              <i class="fas fa-spinner fa-spin"></i>
+            </div>
+
+            <p class="login-link">
+              Already have an account? <a href="/login.html">Login here</a>
+            </p>
+          </form>
+
+          <div id="message">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer-placeholder" class="footer"></footer>
+
+    <script src="signup.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  </body>
+</html>

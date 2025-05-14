@@ -1,0 +1,149 @@
+@import url("navbar.css");
+@import url("footer.css");
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f8fb;
+  color: #1e293b;
+}
+
+/* Card Layout */
+.card-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.car-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.8s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-6px);
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Content Styling */
+.content-section {
+  padding: 24px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#carTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #0f172a;
+}
+
+.location {
+  font-size: 14px;
+  color: #475569;
+  margin-top: 4px;
+}
+
+.cart-btn-container {
+  margin-top: 10px;
+}
+
+.cart-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Price */
+.price-row {
+  margin: 20px 0;
+  font-size: 22px;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.old-price {
+  color: #9ca3af;
+  font-size: 16px;
+  margin-left: 15px;
+  text-decoration: line-through;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.detail-box {
+  background-color: #eff6ff;
+  padding: 14px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.detail-box:hover {
+  transform: translateY(-4px);
+}
+
+.detail-box i {
+  font-size: 22px;
+  color: #2563eb;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price-row {
+    font-size: 20px;
+  }
+}

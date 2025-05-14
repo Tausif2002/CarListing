@@ -1,0 +1,626 @@
+@import url("navbar.css");
+@import url("footer.css");
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+
+
+
+/* Hero Section */
+
+.hero {
+    background: url('./public//images/CarHero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 10, 20, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    z-index: 101;
+    display: flex;
+    gap: 1px;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.search-bar input,
+.search-bar select {
+    padding: 10px;
+    padding-right: 0px;
+    margin-right: 5px;
+    border: none;
+    font-size: 16px;
+    min-width: 160px;
+    border-right: 2px solid #dcdcdc;
+    outline: none;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 8px 30px 8px 10px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+
+.custom-select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    font-size: 16px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666362;
+}
+
+
+.search-bar button {
+    background-color: #3753f7;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+
+.search-bar button:hover {
+    background-color: #050c33;
+}
+
+
+
+/* Brands List */
+
+main{
+    margin: 0px 5%;
+}
+
+.section-heading {
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 5%;
+  }
+  
+  .section-subtitle {
+    color: #3753f7; 
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  .section-subtitle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 5px;
+    border-bottom: 2px solid #3753f7;
+    border-radius: 50% / 100%;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0c2340; /* dark navy color */
+    margin: 0;
+  }
+  
+.brand-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 250px;
+
+}
+
+.brand-card img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.brand-info {
+    padding: 16px;
+    text-align: center;
+}
+
+
+.brand-name {
+    margin: 8px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.brand-quant {
+    margin: 0;
+    color: #666;
+}
+
+
+.image-effect:before,
+.image-effect:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .3);
+    transition: transform .5s, opacity .2s ease-in-out 0s;
+    opacity: 0;
+    pointer-events: none; /* 🔥 Add this */
+    filter: alpha(opacity=0);
+}
+
+
+.effect-item:hover .image-effect:before {
+    transform: scale(0, 1);
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.effect-item:hover .image-effect:after {
+    transform: scale(1, 0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.image-effect {
+    transition: transform 1s;
+}
+
+.effect-item:hover .image-effect {
+    transform: scale(1.2) rotate(2deg);
+}
+
+/* see all button */
+
+#seeAllBtn {
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3753f7;
+    background-color: transparent;
+    border: 2px solid #3753f7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 40px auto 0px;
+  }
+  
+  #seeAllBtn:hover {
+    background-color: #3753f7;
+    color: white;
+    box-shadow: 0 4px 10px rgba(55, 83, 247, 0.2);
+  }
+  
+
+
+/* Car List */
+
+.car-list{
+    margin-bottom: 40px;
+}
+
+.car-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.2s;
+}
+
+/* .card:hover {
+    transform: scale(1.02);
+} */
+
+.card-header {
+    position: relative;
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    display: block;
+}
+
+
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #405ff2;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+    z-index: 10;
+}
+
+.badge.used {
+    background: #405ff2;
+}
+
+.icon-buttons {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+}
+
+ .icon {
+    background: white;
+    border-radius: 10px;
+    width: 24px;
+    height: 24px;
+    padding: 5px 20px;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #ff0200;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-icon{
+    width: 24px;
+}
+.add-cart-icon{
+    width: 24px;
+}
+.car-title{
+    text-decoration: none;
+    color: #1f2937;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-body h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.card-body .brand {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.effect-item:hover .brand{
+    color: #405ff2;
+    z-index: 7;
+}
+.effect-item:hover  .car-title{
+    color: #405ff2;
+}
+
+.icon:hover .add-cart-icon {
+    fill: #DA4567;
+    transform: scale(1.1);
+}
+
+.icon:hover .wishlist-icon{
+    fill: #DA4567;
+    transform: scale(1.1);
+}
+
+.price-rev-cont {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 18px;
+
+}
+
+.price {
+    margin-top: 15px;
+    color: #405ff2;   
+    font-weight: bold;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    align-content: center;
+    gap:18px;
+    margin-bottom: 8px;
+}
+
+.before-dis-price{
+    text-decoration: line-through;
+    font-size: 15px;
+    color: #555555;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #374151;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-item img {
+    width: 32px;
+    height: 24px;
+}
+
+.review i{
+    font-size: 13px;
+}
+
+/* qbty control */
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 3px;
+    gap: 4px;
+  }
+  
+  .quantity-control button {
+    background-color: #ff0200;
+    border: none;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .quantity-control .quantity {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+
+
+/* Mobile responsive */
+
+/* hero section */
+@media only screen and (max-width: 600px) {
+    .hero {
+        position: relative;
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                    url('./public//images/CarHero.jpg') no-repeat center center / cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 25px 20px;
+        width: 100%;
+        max-width: 420px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .search-bar input[type="text"],
+    .custom-select,
+    .search-bar button {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .custom-select-wrapper {
+        width: 100%;
+    }
+
+    .custom-select {
+        background-color: #fff;
+        color: #333;
+        appearance: none;
+    }
+
+    .search-bar input[type="text"] {
+        background-color: #f9f9f9;
+    }
+
+    .search-bar button {
+        background-color: #ff5722;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s;
+    }
+
+    .search-bar button:hover {
+        background-color: #e64a19;
+    }
+
+    .search-bar button i {
+        margin-right: 6px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #brandList {
+        display: flex;
+        gap: 10px;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+
+    .brand-card {
+        background-color: #fff;
+        border-radius: 12px;
+        width: 45%;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .brand-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .brand-card a {
+        display: block;
+        text-decoration: none;
+        color: #3753f7;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-effect img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+    .brand-info {
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .brand-quant {
+        font-size: 0.9rem;
+        color: #777;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .car-list {
+        display: grid;
+        gap: 20px;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
+    
+    .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        transition: transform 0.2s;
+        margin: auto;
+    }
+}

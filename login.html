@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YourCar Login</title>
+  <link rel="stylesheet" href="login.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+  <script type="module">
+    import {loadNavbar, loadFooter} from './layoutHelper.js'
+        loadNavbar('navbar-placeholder')
+        loadFooter('footer-placeholder')
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <nav id="navbar-placeholder" class="navbar">
+    </nav>
+
+    <div class="content">
+
+      <div class="card">
+        <div class="brand">          
+          <h1>Your Car</h1>
+        </div>
+        <h2 class="title">Login to Your Account</h2>
+        <p class="subtitle">Welcome back to the world of cars</p>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email ID</label>
+            <div class="input-icon">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" placeholder="Enter your email" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-icon">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="Enter your password" required />
+              
+            </div>
+          </div>
+
+          <!-- <div class="checkbox-group">
+            <input type="checkbox" id="rememberMe" />
+            <label for="rememberMe">Remember Me</label>
+          </div> -->
+
+          <button type="submit" class="btn">Login</button>
+
+          <div class="signup">
+            <span>Do not have an account? </span>
+            <a href="/signup.html">Signup</a>
+          </div>
+        </form>
+        <p id="loginMessage"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer-placeholder" class="footer">
+  </footer>
+
+  <script src="login.js" type="module"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+</html>
